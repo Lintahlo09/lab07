@@ -31,12 +31,11 @@ public class IterableWithPolicyImpl<T> implements IterableWithPolicy<T> {
 
         @Override
         public boolean hasNext() {
-            return (current <= list.length);
+            return (current + 1 < list.length);
         }
         @Override
         public T next() {
-            this.current++;
-            return list[this.current];
+            return list[this.current++];
         }
         
     }
